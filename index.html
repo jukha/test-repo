@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="#" id="csslink">
+    <link rel="stylesheet" href="#" id="csssize">
+    <link rel="stylesheet" href="size.css" >
+    <title>Load CSS Dynamically</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 372px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        select,
+        input {
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        p {
+            font-weight: 600;
+        }
+
+        input[type="submit"] {
+            background-color: transparent;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+
+
+        .currentSize {
+            align-self: start;
+            background-color: #000 !important;
+            color: #fff !important;
+            padding: 10px 20px;
+            letter-spacing: 3px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+        }
+        h6{
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <div class="size"> </div> <!--populated by the size.css file -->
+            <div class="hover"> </div><!-- "Hover supported" or "Touch Screen" -->
+            <div id="touch"> </div><!-- "Hover supported" or "Touch Screen" -->
+            <h6>Orientation: <span></span></h6>
+            <div class="col-1">CS Defaulted</div>
+            <div id="col-2">CS Defaulted</div><!-- "CS Defaulted" or "CS By User" -->
+        </div>
+        <form id="form" method="post">
+            <p>Please select foreground color:</p>
+            <div class="textColor">
+                  <input type="radio" id="dark_red" name="text_color" value="dark_red" checked="checked">
+                  <label for="dark_red">Dark Red</label><br>
+            </div>
+            <div class="form-control">
+                  <input type="radio" id="dark_blue" name="text_color" value="dark_blue">
+                  <label for="dark_blue">Dark Blue</label><br>
+            </div>
+
+
+            <br><br>
+
+            <div class="bgColor">
+                <p>Please select background color</p>
+                <select id="bgClr">
+                    <option value="white" selected>White</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+            <br><br>
+            <input type="submit" id="submitBtn" value="Load CSS">
+        </form>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

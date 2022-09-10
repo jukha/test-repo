@@ -1,0 +1,4 @@
+
+.size::before{
+    content: var(--width);
+}

@@ -1,0 +1,10 @@
+*,
+*::before,
+*::after {
+    color: darkred !important;
+    background-color: yellow !important;
+}
+
+input[type="submit"] {
+    color: darkred !important;
+}

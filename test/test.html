@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>CSS Variables Test</title>
+</head>
+
+<body>
+    <h1></h1>
+    <button type="button" onclick="myFunction_get()">Get CSS Variable with JavaScript</button>
+    <script>
+        const el = document.querySelector('h1');
+        var r = document.querySelector(':root');
+        function myFunction_get() {
+            var rs = getComputedStyle(r);
+            alert("The value of --blue is: " + rs.getPropertyValue('--width'));
+        }
+    </script>
+</body>
+
+
+</html>
