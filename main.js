@@ -37,7 +37,6 @@ const arr = [
 function checkWhichSizeMatches() {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].size.matches) {
-      console.log("match result", arr[i].size, "label", arr[i].label);
       size.textContent = arr[i].label;
     }
   }
